@@ -1,0 +1,32 @@
+.form-header{
+  padding: 20px;
+  margin-top: -54px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+.row{
+  margin: 0;
+}
+
+.toRight{
+left: unset;
+right: 0;
+
+}
+.mrtl{
+  margin-left: 0;
+  margin-right: 2.5rem;
+}
+
+
+@media screen and (min-width: 1680px) {
+  .login{
+    margin: 10rem 10%!important;
+  }
+}
+@media screen and (max-width: 1680px) {
+  .login{
+    margin: 10rem 0%!important;
+  }
+}
