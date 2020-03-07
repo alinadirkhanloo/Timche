@@ -1,0 +1,22 @@
+.toRight {
+  left: unset;
+  right: 0;
+}
+.btn-floating.btn-lg i {
+  font-size: 1.625rem;
+  line-height: 61.1px;
+}
+.btn-floating i {
+  display: inline-block;
+  width: inherit;
+  color: #fff;
+  text-align: center;
+}
+.contact-section .form .btn-floating {
+  position: relative;
+  bottom: 3rem;
+  float: left;
+  margin-right: 5px;
+  border-radius: 50%;
+  padding: 16px;
+}
