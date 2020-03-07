@@ -1,0 +1,22 @@
+<div dir="ltr">
+        <ngx-slick-carousel class="carousel" 
+        #slickModal="slick-carousel" 
+        [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide"> 
+                <div class="banner container">
+                        <mat-card class="dashboard-card">
+                                <div>
+                                    <div class="item-caption">
+                                        <div style="margin: 10%;">
+                                            <h1>
+                                                Latest Colloction 2019
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                        </mat-card>
+                    </div>
+        </div>
+        </ngx-slick-carousel>
+        </div>
+        

@@ -1,54 +1,83 @@
-<div class="main login" dir="rtl">
-  <div class="row">
+<div style="margin-top: 5%;" dir="rtl">
+    <div id="frameModalTop rounded" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog form-dark " role="document">
+        <!--Content-->
+        <mdb-card
+          class="modal-content login rounded">
+          <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4 rounded">
+            <!--Header-->
+            <div class="modal-header text-center pb-4">
 
-    <!--Grid column-->
-    <div class="col-lg-5 my-4" style="margin: 0 auto;padding: 0 45px">
+                <img src="../../../assets/imgs/logo.png" id="logo" height="60" alt="">
 
-      <!--Form with header-->
-      <mdb-card>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+              <!--Body-->
+              <form [formGroup]="validatingForm" (ngSubmit)="signUp()">
+                <div class="md-form mb-5">
+                  <input type="email" id="Form-email5" class="form-control white-text" mdbInput mdbValidate
+                    formControlName="modalFormDarkEmail">
+                  <label class="toRight" for="Form-email5">ایمیل</label>
+                  <mdb-error style='text-align: right;' class="toRight"
+                    *ngIf="modalFormDarkEmail.invalid && (modalFormDarkEmail.dirty || modalFormDarkEmail.touched)">
+                    ایمیل اشتباه میباشد
+                  </mdb-error>
+                  <mdb-success style='text-align: right;' class="toRight"
+                    *ngIf="modalFormDarkEmail.valid && (modalFormDarkEmail.dirty || modalFormDarkEmail.touched)">
+                    ایمیل صحیح میباشد
+                  </mdb-success>
+                </div>
 
-        <mdb-card-body>
-          <!--Header-->
-          <div class="form-header blue accent-1 z-depth-1-half mb-5">
-            <h3> وارد شوید</h3>
-          </div>
+                <div class="md-form pb-3">
+                  <input type="password" id="Form-pass5" class="form-control white-text" mdbValidate mdbInput
+                    formControlName="modalFormDarkPassword">
+                  <label class="toRight" for="Form-pass5">رمزعبور</label>
+                  <mdb-error style='text-align: right;' class="toRight"
+                    *ngIf="modalFormDarkPassword.invalid && (modalFormDarkPassword.dirty || modalFormDarkPassword.touched)">
+                    رمزعبور اشتباه میباشد
+                  </mdb-error>
+                  <mdb-success style='text-align: right;' class="toRight"
+                    *ngIf="modalFormDarkPassword.valid && (modalFormDarkPassword.dirty || modalFormDarkPassword.touched)">
+                    رمزعبور صحیح میباشد
+                  </mdb-success>
+                </div>
 
-          <p class="grey-text text-center">به وب سایت خود خوش آمدید.</p>
-          <br>
-          <!-- <div class="text-center">
-              <button type="button" mdbBtn class="red darken-3" mdbWavesEffect style="color: white">
-                  +Google<i class="fab fa-google-plus left"></i>
-                  </button>
-          </div> -->
+                <!--Grid row-->
+                <div class="row d-flex align-items-center mb-4">
 
-
-          <!--Body-->
-          <div class="mx-4">
-              <form>
-                  <div class="md-form">
-                    <mdb-icon fas icon="envelope" class="prefix grey-text toRight"></mdb-icon>
-                    <input mdbInput type="text" id="form2" class="form-control mrtl">
-                    <label class="toRight mrtl" for="form2">ایمیل</label>
+                  <!--Grid column-->
+                  <div class="text-center mb-3 col-md-12">
+                    <button type="submit" mdbBtn color="success" block="true" rounded="true" class="z-depth-1 waves-light btn-rounded"
+                      mdbWavesEffect>ورود
+                    </button>
                   </div>
-                  <div class="md-form">
-                    <mdb-icon fas icon="key" class="prefix grey-text toRight"></mdb-icon>
-                    <input mdbInput type="text" id="form2" class="form-control mrtl">
-                    <label class="toRight mrtl" for="form2">رمزعبور</label>
-                  </div>
-                  <div class="text-center">
-                      <button mdbBtn color="light-blue" class="waves-light" mdbWavesEffect>ورود</button>
-                    </div>
-                </form>
+                  <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+              </form>
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-12">
+                  <p class="font-small white-text d-flex justify-content-start">آیا ثبت نام کرده اید؟
+                    <a href="register" class="green-text ml-1 font-weight-bold pr-2"> ثبت نام  </a>
+                  </p>
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+            </div>
           </div>
-
-
-
-
-
-        </mdb-card-body>
-
-      </mdb-card>
-      <!--Form with header-->
-
+        </mdb-card>
+        <!--/.Content-->
+      </div>
     </div>
-</div>
+  </div>
+  <!-- <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+          (click)="frame.show()" mdbWavesEffect>Launch Modal
+  </button> -->

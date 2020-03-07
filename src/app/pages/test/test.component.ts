@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
-
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.scss']
 })
-export class LoginComponent implements OnInit {
-
+export class TestComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, ) { }
   emailError = false;
@@ -46,6 +44,5 @@ export class LoginComponent implements OnInit {
   //     }
   //   }
   }
-
 
 }

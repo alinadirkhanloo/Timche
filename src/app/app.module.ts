@@ -4,9 +4,8 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { FormsModule } from '@angular/forms';
+import { NgxCarouselModule } from 'ngx-carousel';
+import { MDBBootstrapModule, SlideComponent } from 'angular-bootstrap-md';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { NavbarModule, WavesModule } from 'angular-bootstrap-md';
 import { LoginComponent } from './pages/login/login.component';
@@ -54,20 +53,41 @@ import {
   ShowOnDirtyErrorStateMatcher,
   MatMenuItem
 } from '@angular/material';
+import { HomeComponent } from './pages/home/home.component';
+import { TestComponent } from './pages/test/test.component';
+import { BannerSliderComponent } from './components/slideshow/banner-slideshow/banner-slider/banner-slider.component';
+import { BannerSlideshowComponent } from './components/slideshow/banner-slideshow/banner-slideshow.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { BrandSliderComponent } from './components/slideshow/brand-slider/brand-slider.component';
+import { ItemSliderComponent } from './components/slideshow/item-slider/item-slider.component';
+import { ShopComponent } from './pages/shop/shop.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './pages/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    TestComponent,
+    BannerSliderComponent,
+    BannerSlideshowComponent,
+    BrandSliderComponent,
+    ItemSliderComponent,
+    ShopComponent,
+    TestComponent,
+    RegisterComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
+    ReactiveFormsModule,
     FormsModule,
     NavbarModule, WavesModule,
+    SlickCarouselModule,
     MatBadgeModule,
     MatBottomSheetModule,
     MatButtonModule,
@@ -101,6 +121,7 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    NgxCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

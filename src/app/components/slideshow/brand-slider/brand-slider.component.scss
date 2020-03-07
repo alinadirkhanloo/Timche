@@ -1,0 +1,28 @@
+.brand{
+    height: 100px;
+    width: 100%;
+    margin:5% 0;
+}
+
+.dashboard-card{
+    background-repeat: no-repeat;
+    height: 100px;
+    background-position: center;
+
+}
+
+.slick-slider{
+    overflow: hidden;
+}
+.brand-text:hover {
+    cursor: pointer;
+    p{
+    color:#055;
+    }
+}
+.display-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

@@ -1,0 +1,19 @@
+<div class="container">
+    <mdb-card dir="ltr" class="mt-4 mb-4">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of [1,2,3,4,5,6,7,8,9,10]" class="slide">
+                <div class="brand">
+                    <div class="dashboard-card">
+                        <div class="brand-text" style="text-align: center;color:black;">
+                            <p class="mt-5 mb-0">
+                                Latest Colloction 2019
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </ngx-slick-carousel>
+    </mdb-card>
+</div>
